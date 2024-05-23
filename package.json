@@ -13,6 +13,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.18",
+    "@mui/x-data-grid-premium": "^7.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -21,5 +22,19 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.2.11"
+  },
+  "overrides": {
+    "@mui/x-data-grid-premium": {
+      "exceljs": {
+        "archiver": "7.0.1",
+        "unzipper": {
+          ".": "0.10.14",
+          "fstream": {
+            ".": "1.0.12",
+            "rimraf": "4.4.1"
+          }
+        }
+      }
+    }
   }
 }
